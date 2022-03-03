@@ -1,1 +1,6 @@
-#incluse <iostream>
+#include <iostream>
+
+
+main{
+    std::cout << Hello World! << endl;
+};
