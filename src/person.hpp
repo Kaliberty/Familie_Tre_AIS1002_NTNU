@@ -14,6 +14,11 @@ public:
 
 private:
     std::string name_;
+    char First_Name[50];            //
+    char Last_Name[60];             //
+    int Age,x;                      //
+    bool Gender[0];                    //
+
 };
 
 
