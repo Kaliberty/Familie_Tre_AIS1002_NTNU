@@ -10,8 +10,6 @@ public:
 
     const std::string &getName() const;
 
-    void setName(const std::string &name);
-
     const std::string &getFirstName() const;
 
     void setFirstName(const std::string &firstName);
@@ -28,12 +26,13 @@ public:
 
     void setGender(bool gender);
 
+
 private:
     std::string name_;
-    std::string First_Name;         //
-    std::string Last_Name;          //
-    int Age;                        //
-    bool Gender;                    //Gender is set to bool to save on bits: 0=Male, 1=Female
+    std::string firstName_;         //
+    std::string lastName_;          //
+    int age_;                        //
+    bool gender_;                    //Gender is set to bool to save on bits: 0=Male, 1=Female
 
 };
 
