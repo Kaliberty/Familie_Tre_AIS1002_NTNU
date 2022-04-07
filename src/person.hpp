@@ -12,12 +12,28 @@ public:
 
     void setName(const std::string &name);
 
+    const std::string &getFirstName() const;
+
+    void setFirstName(const std::string &firstName);
+
+    const std::string &getLastName() const;
+
+    void setLastName(const std::string &lastName);
+
+    int getAge() const;
+
+    void setAge(int age);
+
+    bool isGender() const;
+
+    void setGender(bool gender);
+
 private:
     std::string name_;
-    char First_Name[50];            //
-    char Last_Name[60];             //
-    int Age,x;                      //
-    bool Gender[0];                    //
+    std::string First_Name;         //
+    std::string Last_Name;          //
+    int Age;                        //
+    bool Gender;                    //Gender is set to bool to save on bits: 0=Male, 1=Female
 
 };
 
