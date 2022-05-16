@@ -1,6 +1,6 @@
 #include <iostream>
 #include "person.hpp"
-#include "node.hpp"
+#include "Node.hpp"
 
 
 int main(){
@@ -10,7 +10,7 @@ int main(){
     Person p("test");
 
 
-    //node test(p);
+    //Node test(p);
 
     std::cout << p.getName() << std::endl;
     return 0;

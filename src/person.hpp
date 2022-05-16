@@ -6,7 +6,7 @@
 class Person {
 
 public:
-    Person(const std::string &name);
+    Person();
 
     const std::string &getName() const;
 
@@ -28,7 +28,6 @@ public:
 
 
 private:
-    std::string name_;
     std::string firstName_;         //
     std::string lastName_;          //
     int age_;                        //

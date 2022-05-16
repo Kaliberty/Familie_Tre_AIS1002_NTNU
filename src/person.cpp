@@ -1,11 +1,7 @@
 #include "person.hpp"
 
 
-Person::Person(const std::string &name) : name_(name) {}
-
-const std::string &Person::getName() const {
-    return name_;
-}
+Person::Person(){}
 
 const std::string &Person::getFirstName() const {
     return firstName_;
@@ -37,9 +33,5 @@ bool Person::isGender() const {
 
 void Person::setGender(bool gender) {
     gender_ = gender;
-}
-
-void Person::setName(const std::string &name) {
-    name_ = name;
 }
 
