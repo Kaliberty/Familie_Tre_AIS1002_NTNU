@@ -3,7 +3,7 @@ project(Family-Tree)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(FamilyTree main.cpp)
+add_executable(FamilyTree main.cpp include/UI/UI.hpp)
 target_link_libraries(FamilyTree PUBLIC family-tree)
 
 add_subdirectory(src)

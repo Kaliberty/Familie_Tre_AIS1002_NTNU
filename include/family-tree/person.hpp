@@ -3,10 +3,15 @@
 
 #include <string>
 
+enum fooGender {Male, Female, Other, None};
+
 class Person {
 
 public:
     Person();
+
+    Person(const std::string &firstName, const std::string &lastName, int age, fooGender gender);
+
 
     const std::string &getFirstName() const;
 
@@ -20,16 +25,18 @@ public:
 
     void setAge(int age);
 
-    bool isGender() const;
 
-    void setGender(bool gender);
+
+    fooGender getGender() const;
+
+    void setGender(fooGender gender);
 
 
 private:
-    std::string firstName_;         //
-    std::string lastName_;          //
-    int age_;                        //
-    bool gender_;                    //Gender is set to bool to save on bits: 0=Male, 1=Female
+    std::string firstName_ ="";         //
+    std::string lastName_ ="";          //
+    int age_ = 0;                        //
+    fooGender gender_ = None;                   //Gender is set to bool to save on bits: 0=Male, 1=Female
 
 };
 
