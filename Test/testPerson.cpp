@@ -10,9 +10,5 @@
         int age = 26;
         bool gender = 0;
 
-        Person person(firstName_);
-}
-
-    TEST_CASE("Test Setters") {
-
+      //  Person person(firstName_);
 }
