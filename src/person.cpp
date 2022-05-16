@@ -3,6 +3,9 @@
 
 Person::Person(){}
 
+Person::Person(const std::string &firstName, const std::string &lastName, int age, fooGender gender) : firstName_(
+        firstName), lastName_(lastName), age_(age), gender_(gender) {}
+
 const std::string &Person::getFirstName() const {
     return firstName_;
 }
@@ -27,11 +30,13 @@ void Person::setAge(int age) {
     age_ = age;
 }
 
-bool Person::isGender() const {
+fooGender Person::getGender() const {
     return gender_;
 }
 
-void Person::setGender(bool gender) {
+void Person::setGender(fooGender gender) {
     gender_ = gender;
 }
+
+
 
