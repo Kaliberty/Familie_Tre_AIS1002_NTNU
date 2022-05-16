@@ -2,11 +2,11 @@
 
 #include "catch.hpp"
 
-#include "src/person.hpp"
+#include "family-tree/person.hpp"
 
     TEST_CASE("Test Getters") {
-        std::string firstName_ = John;
-        std::string lastName_ = Henning;
+        std::string firstName_ = "John";
+        std::string lastName_ = "Henning";
         int age = 26;
         bool gender = 0;
 
