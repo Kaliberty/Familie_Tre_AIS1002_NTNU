@@ -8,8 +8,6 @@ class Person {
 public:
     Person();
 
-    const std::string &getName() const;
-
     const std::string &getFirstName() const;
 
     void setFirstName(const std::string &firstName);
