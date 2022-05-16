@@ -1,6 +1,6 @@
 #include <iostream>
-#include "include/FamilyTree/person.hpp"
-#include "include/FamilyTree/Node.hpp"
+#include "include/family-tree/person.hpp"
+#include "include/family-tree/Node.hpp"
 
 
 int main(){

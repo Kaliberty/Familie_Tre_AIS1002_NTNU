@@ -1,4 +1,4 @@
-#include "../include/FamilyTree/person.hpp"
+#include "../include/family-tree/person.hpp"
 
 
 Person::Person(){}
