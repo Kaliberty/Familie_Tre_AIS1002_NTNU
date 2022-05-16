@@ -1,8 +1,18 @@
-//
-// Created by emile on 28.04.2022.
-//
+#define CATCH_CONFIG_MAIN
 
-#ifndef UNTITLED1_TESTPERSON_H
-#define UNTITLED1_TESTPERSON_H
+#include "catch.hpp"
 
-#endif //UNTITLED1_TESTPERSON_H
+#include "src/person.hpp"
+
+    TEST_CASE("Test Getters") {
+        std::string firstName_ = John;
+        std::string lastName_ = Henning;
+        int age = 26;
+        bool gender = 0;
+
+        Person person(firstName_);
+}
+
+    TEST_CASE("Test Setters") {
+
+}
