@@ -1,5 +1,11 @@
-
-include_directories("${CMAKE_SOURCE_DIR}/src")
+#include_directories("${CMAKE_SOURCE_DIR}/src")
 
 add_executable(testPerson testPerson.cpp)
-add_test(NAME testPerson COMMAND testPerson)
+
+
+
+target_link_libraries(testPerson PUBLIC family-tree)
+
+
+
+#add_test(NAME testPerson COMMAND testPerson)
