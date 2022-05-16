@@ -1,0 +1,3 @@
+C:/Users/emile/OneDrive - NTNU/Documents/GitHub/Familie_Tre_AIS1002_NTNU/Test/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/emile/OneDrive - NTNU/Documents/GitHub/Familie_Tre_AIS1002_NTNU/Test/cmake-build-debug/CMakeFiles/testPerson.dir
+C:/Users/emile/OneDrive - NTNU/Documents/GitHub/Familie_Tre_AIS1002_NTNU/Test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
