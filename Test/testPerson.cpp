@@ -4,6 +4,7 @@
 
 #include "src/person.hpp"
 
+
     TEST_CASE("Test Getters") {
         std::string firstName_ = John;
         std::string lastName_ = Henning;

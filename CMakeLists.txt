@@ -3,7 +3,7 @@ project(untitled1)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(untitled1 src/Main.cpp src/person.cpp src/person.hpp src/tree.cpp src/tree.hpp src/Node.cpp src/Node.hpp)
+add_executable(untitled1)
 
 add_subdirectory(Data)
 add_subdirectory(src)
