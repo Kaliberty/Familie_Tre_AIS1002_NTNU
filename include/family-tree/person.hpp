@@ -36,7 +36,7 @@ private:
     std::string firstName_ ="";         //
     std::string lastName_ ="";          //
     int age_ = 0;                        //
-    eGender gender_ = None;                   //Gender is set to bool to save on bits: 0=Male, 1=Female
+    eGender gender_ = None;
 
 };
 

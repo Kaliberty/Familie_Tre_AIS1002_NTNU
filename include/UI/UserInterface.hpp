@@ -17,9 +17,9 @@ public:
         std::cout << "\n";
         std::cout << "Welcome to this family tree application\n";
         std::cout << "Please choose your desired option from the list bellow\n";
-        std::cout << "1. Create a new family tree\n";
-        std::cout << "2. Edit currenty loaded tree\n";
-        std::cout << "3. Load a previous tree\n";
+        std::cout << "1. Show my current tree\n";
+        std::cout << "2. Create a new family tree\n";
+        std::cout << "3. Edit Current tree\n";
         std::cout << "9. Exit\n";
         std::cout << "Option: ";
     }
@@ -46,51 +46,124 @@ public:
         std::cout << "Option: ";
     }
 
-    static void loadTree(){
+    static void editPerson(){
         std::cout << "\n";
-        std::cout << "Which tree do you want to load?\n";
-        std::cout << "1. Tree 1\n";
-        std::cout << "2. Tree 2\n";
-        std::cout << "3. Tree 3\n";
-        std::cout << "Type 0 to go back\n";
-        std::cout << "Load number: ";
+        std::cout << "What information would you like to change?\n";
+        std::cout << "1. First name\n";
+        std::cout << "2. Last name\n";
+        std::cout << "3. Age\n";
+        std::cout << "4. Gender\n";
+        std::cout << "Option: ";
+
+    }
+
+    static void showTree(){
+        std::cout << "This is your current tree:\n";
+        std::cout << "Press 0 to go back to main menu\n";
     }
 
 
+    static void editFirstName(){
+        char name_;
+        std::cout << "Enter the persons first name:\n";
 
 
+    }
 
+    static void editLastName(){
+        char name_;
+        std::cout << "Enter the persons last name:\n";
 
+    }
 
+    static void editAge(){
+        int age_ = 0;
+        std::cout << "Enter the persons age:\n";
 
+    }
 
+    static void editGender(){
+        eGender gender;
+        std::cout << "Enter the persons gender (Male, Female, Other):\n";
 
+    }
 
+    static void menuSelector(bool running) {
+        while (running) {
+            int userOption = 0;
+            int menuLevel = 0;
+            int editOption = 0;
 
+            std::cin >> userOption;
 
+            switch (menuLevel) {
+                case 0:
+                    switch (userOption) {
+                        case 1:
+                            showTree();
+                            menuLevel = 1;      //Show tree
+                            break;
+                        case 2:
+                            newTree();
+                            menuLevel = 2;      //Create new tree
+                            break;
+                        case 3:
+                            editTree();
+                            menuLevel = 3;      //Edit Tree
+                            break;
+                        case 9:
+                            running = false;    //Stop program
+                            break;
+                        default:
+                            break;
+                    }
+                case 1:
+                    if (userOption == 0) {
+                        mainMenu();
+                        menuLevel = 0;
+                    }
+                    break;
+                case 2:
+                    newTree();
+                    if (userOption == 0) {
+                        mainMenu();
+                        menuLevel = 0;
+                    }
+                    break;
+                case 3:
+                    std::cin >> editOption;                     //Need Help with this one
+                    editPerson();
+                    switch (editOption) {                        //Switch Case for editing
+                        case 1:                                 //Edit First Name
+                            editFirstName();
+                            break;
+                        case 2:                                 //Edit Last Name
+                            editLastName();
+                            break;
+                        case 3:                                 //Edit Age
+                            editAge();
+                            break;
+                        case 4:                                 //Edit gender
+                            editGender();
+                            break;
+                        case 0:                                 //Go back
+                            editTree();
+                            menuLevel = 2;
+                            break;
+                        default:
+                            break;
+                            }
+                            if (userOption == 0) {
+                                mainMenu();
+                                menuLevel = 0;
+                            }
+                            break;
+                    }
+            }
+        }
 
-
-
-
-
-    /* Welcome to this family tree application.
-     * Please press a number and enter to choose from menu:
-     * 1. Start a new tree
-     * 2. Edit tree
-     * 3. Load tree
-     * 4. exit
-     *
-     *
-     * 1-> Tree setup
-     * 1. add new person ( cin << navn >> endl;
-     * 2. delete person
-     * 3. edit person
-     *
-     * void treeSetup(){
-     *  switch case
-     *
-     */
 };
+
 
 /*void userInterface::treeSetup(){
 
