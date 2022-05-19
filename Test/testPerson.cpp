@@ -5,25 +5,25 @@
 #include "family-tree/person.hpp"
 
 TEST_CASE("Test Getters") {
-        std::string firstName_ = "John";
-        std::string lastName_ = "Henning";
+        std::string firstName_ = "Ola";
+        std::string lastName_ = "Nordman";
         int age_ = 26;
-        fooGender gender_ = Male;
+        eGender gender_ = Male;
 
         Person person(firstName_, lastName_, age_, gender_);
 
-        REQUIRE("John" == person.getFirstName());
-        REQUIRE("Henning" == person.getLastName());
+        REQUIRE("Ola" == person.getFirstName());
+        REQUIRE("Nordman" == person.getLastName());
         REQUIRE(26 == person.getAge());
         REQUIRE(Male == person.getGender());
 
 }
 
 TEST_CASE("Test Setters") {
-        std::string firstName_ = "John";
-        std::string lastName_ = "Henning";
+        std::string firstName_ = "Ola";
+        std::string lastName_ = "Nordman";
         int age_ = 26;
-        fooGender gender_ = Male;
+        eGender gender_ = Male;
         Person person;
 
         REQUIRE("" == person.getFirstName());

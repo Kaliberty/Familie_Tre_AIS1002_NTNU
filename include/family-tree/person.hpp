@@ -1,16 +1,16 @@
-#ifndef UNTITLED1_PERSON_HPP
-#define UNTITLED1_PERSON_HPP
+#ifndef FAMILY_TREE_PERSON_HPP
+#define FAMILY_TREE_PERSON_HPP
 
 #include <string>
 
-enum fooGender {Male, Female, Other, None};
+enum eGender {None, Male, Female, Other};
 
 class Person {
 
 public:
     Person();
 
-    Person(const std::string &firstName, const std::string &lastName, int age, fooGender gender);
+    Person(const std::string &firstName, const std::string &lastName, int age, eGender gender);
 
 
     const std::string &getFirstName() const;
@@ -27,18 +27,18 @@ public:
 
 
 
-    fooGender getGender() const;
+    eGender getGender() const;
 
-    void setGender(fooGender gender);
+    void setGender(eGender gender);
 
 
 private:
     std::string firstName_ ="";         //
     std::string lastName_ ="";          //
     int age_ = 0;                        //
-    fooGender gender_ = None;                   //Gender is set to bool to save on bits: 0=Male, 1=Female
+    eGender gender_ = None;                   //Gender is set to bool to save on bits: 0=Male, 1=Female
 
 };
 
 
-#endif //UNTITLED1_PERSON_HPP
+#endif //FAMILY_TREE_PERSON_HPP
