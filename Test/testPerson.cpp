@@ -1,8 +1,7 @@
 #define CATCH_CONFIG_MAIN
 
 #include "catch.hpp"
-
-#include "family-tree/person.hpp"
+#include "person.hpp"
 
 TEST_CASE("Test Getters") {
         std::string firstName_ = "Ola";
