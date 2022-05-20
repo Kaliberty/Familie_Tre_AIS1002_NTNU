@@ -12,7 +12,7 @@ public:
 };
 
 
-bool running = true;
+bool running = false;
 int main() {
     Person familyName;
 
