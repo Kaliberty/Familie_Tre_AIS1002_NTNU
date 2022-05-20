@@ -6,13 +6,15 @@
 #include "include/family-tree/Tree.hpp"
 #include "FamilyTree.hpp"
 
-class UI{
+class UI {
 public:
     UI() {}
 };
 
+
+bool running = true;
 int main() {
-     Person familyName;
+    Person familyName;
 
     //
     familyName.setAge(12);
@@ -29,11 +31,11 @@ int main() {
     myTree->addNode(z);
 
 
-  //  std::cout << myTree->getCurrentData().getAge() << std::endl;
+    //  std::cout << myTree->getCurrentData().getAge() << std::endl;
 
-  /*  myTree->traverseDepthFirst([&](std::shared_ptr<FamilyTree::Node> f){
-        myTree->getSearchList().emplace_back(f);
-    }); */
+    /*  myTree->traverseDepthFirst([&](std::shared_ptr<FamilyTree::Node> f){
+          myTree->getSearchList().emplace_back(f);
+      }); */
 
 
 
@@ -41,7 +43,7 @@ int main() {
         std::cout << x->getData().getAge() << std::endl;
     }*/
 
-     //myTree->traverseDepthFirst();
+    //myTree->traverseDepthFirst();
     //std::cout << myTree->getSearchList().size();
     std::cout << myTree->getCurrentChildren()[1]->getData().getAge();
 
@@ -68,19 +70,19 @@ int main() {
 
 
 
-    bool running = true;
-int main() {
-    UI i;
 
-    Person p;
-    UserInterface UI;
 
-    UserInterface::mainMenu();
+        UI i;
 
-    while (running) {
-        UserInterface::menuSelector(running);
-        return 0;
-    }
+        Person p;
+        UserInterface UI;
+
+        UserInterface::mainMenu();
+
+        while (running) {
+            UserInterface::menuSelector(running);
+            return 0;
+        }
 
 
     return 0;
