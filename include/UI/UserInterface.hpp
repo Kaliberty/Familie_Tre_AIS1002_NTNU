@@ -7,14 +7,14 @@
 //bool running = true;
 
 
-class UserInterface{
+class UserInterface {
 public:
     UserInterface();
+
     ~UserInterface();
 
 
-
-    static void mainMenu(){
+    static void mainMenu() {
         std::cout << "\n";
         std::cout << "Welcome to this family tree application\n";
         std::cout << "Please choose your desired option from the list bellow\n";
@@ -25,15 +25,18 @@ public:
         std::cout << "Option: ";
     }
 
-    static void newTree(){
+    static void newTree() {
+        std::string firstName;
         std::cout << "\n";
         std::cout << "You have decided to create a new family tree\n";
         std::cout << "Lets start by entering your name\n";
         std::cout << "Type 0 to go back\n";
-        std::cout << "Name: ";
+        std::cout << "First Name: ";
+        std::cin >> firstName;
+
     }
 
-    static void editTree(){
+    static void editTree() {
         int personToEdit = -1;
         std::cout << "\n";
         std::cout << "Who do you wish to edit the information off?\n";
@@ -49,7 +52,7 @@ public:
         std::cin >> personToEdit;
     }
 
-    static void editPerson(){
+    static void editPerson() {
         int editLevel = -1;
         std::cout << "\n";
         std::cout << "What information would you like to change?\n";
@@ -62,32 +65,32 @@ public:
 
     }
 
-    static void showTree(){
+    static void showTree() {
         std::cout << "This is your current tree:\n";
         std::cout << "Press 0 to go back to main menu\n";
     }
 
 
-    static void editFirstName(){
+    static void editFirstName() {
         char name_;
         std::cout << "Enter the persons first name:\n";
 
 
     }
 
-    static void editLastName(){
+    static void editLastName() {
         char name_;
         std::cout << "Enter the persons last name:\n";
 
     }
 
-    static void editAge(){
+    static void editAge() {
         int age_ = 0;
         std::cout << "Enter the persons age:\n";
 
     }
 
-    static void editGender(){
+    static void editGender() {
         eGender gender;
         std::cout << "Enter the persons gender (Male, Female, Other):\n";
 
@@ -100,10 +103,9 @@ public:
             int personToEdit = 11;
 
 
-
             switch (menuLevel) {
                 case -1:
-                std::cin >> userOption;
+                    std::cin >> userOption;
                 case 0:
                     switch (userOption) {
                         case 1:
@@ -142,59 +144,59 @@ public:
                     break;
                 default:
                     break;
-                    }
-
-
-
-
-
-
-
-                    /*if (editLevel == "F"){
-                        editFirstName();
-                    }
-                    else if (editLevel == "L") {
-                        editLastName();
-                    }
-                    else if (editLevel == "A") {
-                        editAge();
-                    }
-                    else if (editLevel == "G") {
-                        editGender();
-                    }
-                    else if (editLevel == "E"){
-                        menuLevel = 3;
-                    }
-
-                    switch (userOption) {                        //Switch Case for editing
-                        case a:                                 //Edit First Name
-                            editFirstName();
-                            break;
-                        case b:                                 //Edit Last Name
-                            editLastName();
-                            break;
-                        case c:                                 //Edit Age
-                            editAge();
-                            break;
-                        case d:                                 //Edit gender
-                            editGender();
-                            break;
-                        case 0:                                 //Go back
-                            editTree();
-                            menuLevel = 2;
-                            break;
-                        default:
-                            break;
-                            }
-                            if (userOption == 0) {
-                                mainMenu();
-                                menuLevel = 0;
-                            }
-                            break;
-                            */
-                    }
             }
-        };
+
+
+
+
+
+
+
+            /*if (editLevel == "F"){
+                editFirstName();
+            }
+            else if (editLevel == "L") {
+                editLastName();
+            }
+            else if (editLevel == "A") {
+                editAge();
+            }
+            else if (editLevel == "G") {
+                editGender();
+            }
+            else if (editLevel == "E"){
+                menuLevel = 3;
+            }
+
+            switch (userOption) {                        //Switch Case for editing
+                case a:                                 //Edit First Name
+                    editFirstName();
+                    break;
+                case b:                                 //Edit Last Name
+                    editLastName();
+                    break;
+                case c:                                 //Edit Age
+                    editAge();
+                    break;
+                case d:                                 //Edit gender
+                    editGender();
+                    break;
+                case 0:                                 //Go back
+                    editTree();
+                    menuLevel = 2;
+                    break;
+                default:
+                    break;
+                    }
+                    if (userOption == 0) {
+                        mainMenu();
+                        menuLevel = 0;
+                    }
+                    break;
+                    */
+        }
+    }
+};
 
 
 /*void userInterface::treeSetup(){

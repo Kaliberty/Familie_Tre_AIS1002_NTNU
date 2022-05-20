@@ -3,7 +3,9 @@
 
 #include <string>
 
-enum eGender {None, Male, Female, Other};
+enum eGender {
+    None, Male, Female, Other
+};
 
 class Person {
 
@@ -26,15 +28,14 @@ public:
     void setAge(int age);
 
 
-
     eGender getGender() const;
 
     void setGender(eGender gender);
 
 
 private:
-    std::string firstName_ ="";         //
-    std::string lastName_ ="";          //
+    std::string firstName_ = "";         //
+    std::string lastName_ = "";          //
     int age_ = 0;                        //
     eGender gender_ = None;
 

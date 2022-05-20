@@ -6,8 +6,6 @@
 #include <ostream>
 #include <functional>
 
-//#include <string>
-
 
 template<class T>
 class Tree {
@@ -17,6 +15,8 @@ public:
         explicit Node(T &data) {
             data_ = data;
         };
+
+      //  virtual ~Node() = default;
 
         auto &getData() { return data_; }
 
@@ -40,15 +40,17 @@ public:
     };
 
 
-    Tree(T &data) {
+    explicit Tree(T &data) {
         auto rootNode = std::make_shared<Node>(data);
         root_ = rootNode;
         currentNode_ = root_;
     }
 
+   // virtual ~Tree() = default;
+
     auto getCurrentNode() const { return currentNode_; }
 
-    T &getCurrentData() const { return currentNode_->getData(); }
+    auto &getCurrentData() const { return currentNode_->getData(); }
 
     auto getCurrentChildren() { return currentNode_->getChildren(); }
 

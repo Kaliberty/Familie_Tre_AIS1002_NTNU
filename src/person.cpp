@@ -1,7 +1,7 @@
 #include "../include/family-tree/person.hpp"
 
 
-Person::Person(){}
+Person::Person() {}
 
 Person::Person(const std::string &firstName, const std::string &lastName, int age, eGender gender) : firstName_(
         firstName), lastName_(lastName), age_(age), gender_(gender) {}
