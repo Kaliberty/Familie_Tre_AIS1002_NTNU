@@ -13,13 +13,17 @@ int main(){
     familyName.setAge(12);
 //   Node test(p);
 //   Node left(f);
-
+Person test;
+test.setAge(5);
     familyName.setFirstName("test");
     auto myTree = std::make_shared<Tree>(familyName);
     std::shared_ptr<Tree::Node> f;
+
     myTree->addNode(f);
+    f->setData(test);
 
     std::cout << myTree->getCurrentData().getAge() << std::endl;
+    std::cout << myTree->getCurrentChildren()[0]->getParent()->getData().getAge() << std::endl;
     //myTree->getCurrentNode()->
 
    // std::cout << myTree->getCurrentNode().isRoot << std::endl;

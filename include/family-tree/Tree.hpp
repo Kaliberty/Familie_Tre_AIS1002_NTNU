@@ -14,7 +14,7 @@ public:
     class Node {
     public:
         explicit Node(Person data) {
-            data_ = data;
+            data_ = std::move(data);
         };
         auto getData() { return data_;}
         void setData(Person data) { data_ = std::move(data);}
@@ -33,20 +33,21 @@ public:
 
 
 
-    Tree(Person &data) {
+    explicit Tree(Person &data) {
         auto rootNode = std::make_shared<Node>(data);
         root_ = rootNode;
         currentNode_ = root_;
     }
-    auto getCurrentNode() const{return currentNode_;}
-    auto getCurrentData() const{return currentNode_->getData();}
+    [[nodiscard]] auto getCurrentNode() const{return currentNode_;}
+    [[nodiscard]] auto getCurrentData() const{return currentNode_->getData();}
     auto &getCurrentChildren() {return currentNode_->getChildren();}
 
     void addNode(const std::shared_ptr<Node>& node) {
-        const auto& addedNode = node;
+       // const auto& addedNode = node;
        // node.parent_ = this; // this -> Node*
        currentNode_->getChildren().push_back(node);
-       addedNode->getParent() = currentNode_;
+       currentNode_->getParent() = currentNode_;
+       //addedNode->getParent() = currentNode_;
 
     }
 
