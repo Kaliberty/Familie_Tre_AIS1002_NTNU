@@ -8253,7 +8253,7 @@ namespace Catch {
 #if !defined(CATCH_CONFIG_DISABLE_EXCEPTIONS)
             throw Catch::TestFailureException();
 #else
-            CATCH_ERROR( "Test failure requires aborting test!" );
+            CATCH_ERROR( "test failure requires aborting test!" );
 #endif
         }
     }
@@ -13450,7 +13450,7 @@ namespace Catch {
         Catch::cout()
                 << std::left << std::setw(16) << "description: " << "A Catch2 test executable\n"
                 << std::left << std::setw(16) << "category: " << "testframework\n"
-                << std::left << std::setw(16) << "framework: " << "Catch Test\n"
+                << std::left << std::setw(16) << "framework: " << "Catch test\n"
                 << std::left << std::setw(16) << "version: " << libraryVersion() << std::endl;
     }
 
@@ -14555,7 +14555,7 @@ namespace TestCaseTracking {
         if( !filters.empty() ) {
             m_filters.reserve( m_filters.size() + filters.size() + 2 );
             m_filters.emplace_back(""); // Root - should never be consulted
-            m_filters.emplace_back(""); // Test Case - not a section filter
+            m_filters.emplace_back(""); // test Case - not a section filter
             m_filters.insert( m_filters.end(), filters.begin(), filters.end() );
         }
     }

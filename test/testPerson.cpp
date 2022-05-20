@@ -3,7 +3,7 @@
 #include "catch.hpp"
 #include "person.hpp"
 
-TEST_CASE("Test Getters") {
+TEST_CASE("test Getters") {
         std::string firstName_ = "Ola";
         std::string lastName_ = "Nordman";
         int age_ = 26;
@@ -18,7 +18,7 @@ TEST_CASE("Test Getters") {
 
 }
 
-TEST_CASE("Test Setters") {
+TEST_CASE("test Setters") {
         std::string firstName_ = "Ola";
         std::string lastName_ = "Nordman";
         int age_ = 26;

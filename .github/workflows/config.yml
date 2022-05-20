@@ -20,7 +20,7 @@ jobs:
           cmake . -B build -A x64
           cmake --build build --config Release
 
-      - name: Test
+      - name: test
         run: |
-          cd build/tests
+          cd test
           ctest -C Release --output-on-failure
