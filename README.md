@@ -1,19 +1,24 @@
-# Familie_Tre_AIS1002_NTNU
-Mappe oppgave i AIS1002 Objektorientert programmering og alogritmer.
+# Familytree program
+A program made by studenst at NTNU Ålesund in the class AIS2001
 
-Kanditatnummer på studentene er:
+#candidate number:
+10041 & 10003
 
-10041
+#Reason for this program:
+This program is a respond to the mandatory assignment: "Mappeprosjekt AIS2001 vår 2022 ved NTNU Ålesund"
 
-10003
+#What does this program do?
+The purpose of this program is to give a user the ability to generate and edit a familytree.
+To user can interact with the tree by using diffrent menus. 
 
-Familie tre oppgave fra NTNU Ålesund. 
+#UML Diagram
 
-Dette er en gruppeoppgave hvor meningen er å vise sin c++ kompetasne
+
+
+#Sources
 
 Oppgaven:
-
-https://tinyurl.com/FamilieTreOppgave
+Ligger som PDF i data
 
 Interesting links:
 

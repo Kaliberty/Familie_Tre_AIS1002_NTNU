@@ -13,6 +13,7 @@ public:
     ~UserInterface();
 
 
+
     static void mainMenu(){
         std::cout << "\n";
         std::cout << "Welcome to this family tree application\n";
@@ -33,6 +34,7 @@ public:
     }
 
     static void editTree(){
+        int personToEdit = -1;
         std::cout << "\n";
         std::cout << "Who do you wish to edit the information off?\n";
         std::cout << "1. Myself\n";
@@ -44,9 +46,11 @@ public:
         std::cout << "7. My grandmother (mothers side)\n";
         std::cout << "Type 0 to go back\n";
         std::cout << "Option: ";
+        std::cin >> personToEdit;
     }
 
     static void editPerson(){
+        int editLevel = -1;
         std::cout << "\n";
         std::cout << "What information would you like to change?\n";
         std::cout << "1. First name\n";
@@ -54,6 +58,7 @@ public:
         std::cout << "3. Age\n";
         std::cout << "4. Gender\n";
         std::cout << "Option: ";
+        std::cin >> editLevel;
 
     }
 
@@ -90,13 +95,15 @@ public:
 
     static void menuSelector(bool running) {
         while (running) {
-            int userOption = 0;
-            int menuLevel = 0;
-            int editOption = 0;
+            int userOption = -1;
+            int menuLevel = -1;
+            int personToEdit = 11;
 
-            std::cin >> userOption;
+
 
             switch (menuLevel) {
+                case -1:
+                std::cin >> userOption;
                 case 0:
                     switch (userOption) {
                         case 1:
@@ -131,19 +138,45 @@ public:
                     }
                     break;
                 case 3:
-                    std::cin >> editOption;                     //Need Help with this one
-                    editPerson();
-                    switch (editOption) {                        //Switch Case for editing
-                        case 1:                                 //Edit First Name
+                    editTree();
+                    break;
+                default:
+                    break;
+                    }
+
+
+
+
+
+
+
+                    /*if (editLevel == "F"){
+                        editFirstName();
+                    }
+                    else if (editLevel == "L") {
+                        editLastName();
+                    }
+                    else if (editLevel == "A") {
+                        editAge();
+                    }
+                    else if (editLevel == "G") {
+                        editGender();
+                    }
+                    else if (editLevel == "E"){
+                        menuLevel = 3;
+                    }
+
+                    switch (userOption) {                        //Switch Case for editing
+                        case a:                                 //Edit First Name
                             editFirstName();
                             break;
-                        case 2:                                 //Edit Last Name
+                        case b:                                 //Edit Last Name
                             editLastName();
                             break;
-                        case 3:                                 //Edit Age
+                        case c:                                 //Edit Age
                             editAge();
                             break;
-                        case 4:                                 //Edit gender
+                        case d:                                 //Edit gender
                             editGender();
                             break;
                         case 0:                                 //Go back
@@ -158,11 +191,10 @@ public:
                                 menuLevel = 0;
                             }
                             break;
+                            */
                     }
             }
-        }
-
-};
+        };
 
 
 /*void userInterface::treeSetup(){
@@ -213,6 +245,43 @@ void createPerson(){
             p.setAge(ageFromUser);
             break;
     }
+
+
+
+
+
+
+
+
+
+     switch (editLevel) {
+                        case 1:
+                            editPerson();
+                            break;
+                        case 2:
+                            editPerson();
+                            break;
+                        case 3:
+                            editPerson();
+                            break;
+                        case 4:
+                            editPerson();
+                            break;
+                        case 5:
+                            editPerson();
+                            break;
+                        case 6:
+                            editPerson();
+                            break;
+                        case 7:
+                            editPerson();
+                            break;
+                        case 0:
+                            menuLevel = 2;
+                            break;
+                        default:
+                            break;
+
     */
 
 #endif //FAMILY_TREE_USERINTERFACE_HPP
