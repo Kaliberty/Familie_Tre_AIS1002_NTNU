@@ -8,4 +8,4 @@ target_link_libraries(FamilyTree PUBLIC family-tree UI)
 
 add_subdirectory(src)
 enable_testing()
-add_subdirectory(Test)
+add_subdirectory(build/Test)

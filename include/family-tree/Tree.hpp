@@ -63,23 +63,7 @@ public:
         currentNode_->getChildren().push_back(addedNode);
         addedNode->getParent() = currentNode_;
     }
-/*
-    void traverseDepthFirst(const std::function<bool(std::shared_ptr<Node>)> &f){
-        searchList_.clear();
-        if(f(getRoot())){
-            searchList_.push_back(getRoot());
-        }
-        traverseDepthFirstHelper(getRoot(),f);
 
-    }
-    void traverseDepthFirstHelper(std::shared_ptr<Node> n, const std::function<bool(std::shared_ptr<Node>)> &f){
-        for (auto c: n->getChildren()){
-            if(f(c)){
-                searchList_.push_back(c);
-            }
-            traverseDepthFirstHelper(c,f);
-        }
-    }*/
     void traverseDepthFirst(const std::function<void(std::shared_ptr<Node>)> &f) {
         f(getRoot());
         for (auto c: getCurrentChildren()) {
