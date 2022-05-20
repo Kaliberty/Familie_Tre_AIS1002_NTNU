@@ -3,25 +3,6 @@ name: Build
 on: [push, workflow_dispatch]
 
 jobs:
-  build-on-linux:
-
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest]
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Configure and build
-        run: |
-          cmake . -B build
-          cmake --build build
-      - name: Test
-        run: |
-          cd build/tests
-          ctest --output-on-failure
 
   build-on-windows:
 
