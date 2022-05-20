@@ -15,8 +15,8 @@ int main(){
 //   Node left(f);
 
     familyName.setFirstName("test");
-    auto myTree = std::make_shared<FamilyTree>(familyName);
-    Person f;
+    auto myTree = std::make_shared<Tree>(familyName);
+    std::shared_ptr<Tree::Node> f;
     myTree->addNode(f);
 
     std::cout << myTree->getCurrentData().getAge() << std::endl;

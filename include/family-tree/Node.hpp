@@ -5,11 +5,11 @@
 #include <string>
 
 
-//template<class T>
+//template<class Person>
 
 /*
-template<class T>
-Node<T>::Node(T &data) {
+template<class Person>
+Node<Person>::Node(Person &data) {
 data_ = data;
 }
 */

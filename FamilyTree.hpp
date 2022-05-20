@@ -4,11 +4,12 @@
 #include "person.hpp"
 #include "Tree.hpp"
 
-class FamilyTree : public Tree<Person>{
+/*class FamilyTree : public Tree<Person>{
 public:
     using Tree<Person>::Tree;
 
+    FamilyTree(Person person);
 };
 
-
+*/
 #endif //FAMILY_TREE_FAMILYTREE_HPP
