@@ -1,4 +1,4 @@
 /cmake-build*
 /build
-/Test/cmake-build-debug/*
+/Test/cmake-build-debug*
 .idea
