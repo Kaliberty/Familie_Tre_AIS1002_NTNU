@@ -5,6 +5,7 @@
 #include "person.hpp"
 #include "Tree.hpp"
 
+
 // FamilyTree.hpp is used to populate the template with a Person
 class FamilyTree : public Tree<Person> {
 public:

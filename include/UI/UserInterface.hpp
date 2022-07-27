@@ -4,6 +4,9 @@
 #include "../family-tree/person.hpp"
 #include <iostream>
 
+#include "../family-tree/person.hpp"
+#include "../family-tree/FamilyTree.hpp"
+
 //bool running = true;
 
 
@@ -25,19 +28,43 @@ public:
         std::cout << "Option: ";
     }
 
-    static void newTree() {
+    static void newTree(std::shared_ptr<FamilyTree> myTree) {
         std::string firstName;
+        std::string lastName;
+        int age;
+        std::string gender;
         std::cout << "\n";
         std::cout << "You have decided to create a new family tree\n";
         std::cout << "Lets start by entering your name\n";
         std::cout << "Type 0 to go back\n";
         std::cout << "First Name: ";
         std::cin >> firstName;
-
+        Person p;
+        p.setFirstName(firstName);
+         std::cout << "Last Name: ";
+         std::cin >> lastName;
+         p.setLastName(lastName);
+         std::cout << "Age: ";
+         std::cin >> age;
+         p.setAge(age);
+         std::cout << "Gender [M]ale, [F]emale, [O]ther: ";
+         std::cin >> gender;
+         if (gender == "M" || gender == "m") {
+             p.setGender(Male);
+         } else if (gender == "Female") {
+             p.setGender(Female);
+         }
+        myTree->addNode(p);
     }
 
-    static void editTree() {
+    static void editTree(std::shared_ptr<FamilyTree> myTree) {
         int personToEdit = -1;
+
+        // loop som leser verdier fra tre
+        /*
+        for (int i=0, i<9, i++){
+
+        */
         std::cout << "\n";
         std::cout << "Who do you wish to edit the information off?\n";
         std::cout << "1. Myself\n";
@@ -96,7 +123,8 @@ public:
 
     }
 
-    static void menuSelector(bool running) {
+    static void menuSelector(bool running, std::shared_ptr<FamilyTree> myTree) {
+        // ... myTree
         while (running) {
             int userOption = -1;
             int menuLevel = -1;
@@ -113,11 +141,11 @@ public:
                             menuLevel = 1;      //Show tree
                             break;
                         case 2:
-                            newTree();
+                            newTree(myTree);
                             menuLevel = 2;      //Create new tree
                             break;
                         case 3:
-                            editTree();
+                            editTree(myTree);
                             menuLevel = 3;      //Edit Tree
                             break;
                         case 9:
@@ -133,7 +161,7 @@ public:
                     }
                     break;
                 case 2:
-                    newTree();
+                    newTree(myTree);
                     if (userOption == 0) {
                         mainMenu();
                         menuLevel = 0;
