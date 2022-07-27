@@ -53,6 +53,8 @@ public:
              p.setGender(Male);
          } else if (gender == "F" || gender=="f") {
              p.setGender(Female);
+         }  else if (gender == "O" || gender == "o"){
+             p.setGender(Other)
          }
         myTree->addNode(p);
     }
