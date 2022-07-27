@@ -51,7 +51,7 @@ public:
          std::cin >> gender;
          if (gender == "M" || gender == "m") {
              p.setGender(Male);
-         } else if (gender == "Female") {
+         } else if (gender == "F" || gender=="f") {
              p.setGender(Female);
          }
         myTree->addNode(p);
