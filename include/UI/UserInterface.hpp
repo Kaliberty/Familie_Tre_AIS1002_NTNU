@@ -54,7 +54,7 @@ public:
          } else if (gender == "F" || gender=="f") {
              p.setGender(Female);
          }  else if (gender == "O" || gender == "o"){
-             p.setGender(Other)
+             p.setGender(Other);
          }
         myTree->addNode(p);
     }
@@ -170,7 +170,7 @@ public:
                     }
                     break;
                 case 3:
-                    editTree();
+                    //editTree();
                     break;
                 default:
                     break;
