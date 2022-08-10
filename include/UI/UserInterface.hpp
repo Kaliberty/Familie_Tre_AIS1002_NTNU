@@ -23,7 +23,7 @@ public:
         std::cout << "Please choose your desired option from the list bellow\n";
         std::cout << "1. Show my current tree\n";
         std::cout << "2. Add a new family member\n";
-        std::cout << "3. Edit Current tree\n";
+        //std::cout << "3. Edit Current tree\n";
         std::cout << "9. Exit\n";
         std::cout << "Option: ";
     }
@@ -34,9 +34,8 @@ public:
         int age;
         std::string gender;
         std::cout << "\n";
-        std::cout << "You have decided to create a new family tree\n";
+        std::cout << "You have decided to add a new member to the family tree\n";
         std::cout << "Lets start by entering your name\n";
-        std::cout << "Type 0 to go back\n";
         std::cout << "First Name: ";
         std::cin >> firstName;
         Person p;
@@ -174,10 +173,10 @@ public:
                             newPerson(myTree, menuLevel);
                             menuLevel = 2;      //Create new tree
                             break;
-                        case 3:
+                        /*case 3:                                   Har ikke tid til å impimentere, og derfor blitt kommentert ut
                             editTree(myTree);
                             menuLevel = 3;      //Edit Tree
-                            break;
+                            break; */
                         case 9:
                             running = false;    //Stop program
                             break;
