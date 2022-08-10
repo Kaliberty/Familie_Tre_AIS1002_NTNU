@@ -28,7 +28,7 @@ public:
         std::cout << "Option: ";
     }
 
-    static void newPerson(std::shared_ptr<FamilyTree> myTree) {
+    static void newPerson(std::shared_ptr<FamilyTree> myTree, int &menuLevel) {
         std::string firstName;
         std::string lastName;
         int age;
@@ -57,6 +57,8 @@ public:
              p.setGender(Other);
          }
         myTree->addNode(p);
+        menuLevel = 0;
+        std::cout << "Press 0 to go back " << std::endl;
     }
 
     static void editTree(std::shared_ptr<FamilyTree> myTree) {
@@ -120,9 +122,8 @@ public:
                 case 3:
                     std::cout << "Gender: Other" << std::endl;
                     break;
-
-
             };
+            std::cout << "Press 0 to go back " << std::endl;
         }
     }
 
@@ -170,7 +171,7 @@ public:
                             menuLevel = 1;      //Show tree
                             break;
                         case 2:
-                            newPerson(myTree);
+                            newPerson(myTree, menuLevel);
                             menuLevel = 2;      //Create new tree
                             break;
                         case 3:
@@ -190,7 +191,7 @@ public:
                     }
                     break;
                 case 2:
-                    newPerson(myTree);
+                    newPerson(myTree, menuLevel);
                     if (userOption == 0) {
                         mainMenu();
                         menuLevel = 0;

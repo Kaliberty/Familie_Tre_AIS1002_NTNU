@@ -47,6 +47,8 @@ private:
 int main() {
     Person basePerson;
     auto myTree = std::make_shared<FamilyTree>(basePerson);
+
+    //myTree->traverseDepthFirst(myTree->getRoot());
     // myTree er en instans av FamilyTree klassen
 
     /*  myTree->traverseDepthFirst([&](std::shared_ptr<FamilyTree::Node> f){
