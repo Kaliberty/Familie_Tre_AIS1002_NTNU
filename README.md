@@ -2,7 +2,7 @@
 A program made by studenst at NTNU Ålesund in the class AIS2001
 
 #candidate number:
-10041 & 10003
+10041 & 10007
 
 #Reason for this program:
 This program is a respond to the mandatory assignment: "Mappeprosjekt AIS2001 vår 2022 ved NTNU Ålesund"
