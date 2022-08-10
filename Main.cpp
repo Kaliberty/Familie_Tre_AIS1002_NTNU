@@ -44,7 +44,7 @@ private:
 
 };
 
-/*<returverdi-type> <funksjons-navn> ( ... argumenter ...)
+<returverdi-type> <funksjons-navn> ( ... argumenter ...)
 {
     int alder; // reserver skuffeplass til 1 stk integer
     if (alder == 5) { .... }
