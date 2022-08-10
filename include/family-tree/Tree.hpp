@@ -10,6 +10,7 @@
 template<class T>
 class Tree {
 public:
+    // Node saves all data and it's relations to other nodes
     class Node {
     public:
         explicit Node(T &data) {
@@ -39,7 +40,7 @@ public:
         std::shared_ptr<Node> parent_ = nullptr;
     };
 
-
+//Tree saves each node in a tree that can be traversed to get different information out of each node.
     explicit Tree(T &data) {
         auto rootNode = std::make_shared<Node>(data);
         root_ = rootNode;
@@ -59,7 +60,7 @@ public:
     std::shared_ptr<Node> getRoot() const { return root_; }
 
     auto getSearchList() { return searchList_; }
-
+//adds a new node to the tree
     void addNode(T node) {
         auto addedNode = std::make_shared<Node>(node);
         currentNode_->getChildren().push_back(addedNode);
