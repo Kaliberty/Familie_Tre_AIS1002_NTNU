@@ -22,13 +22,13 @@ public:
         std::cout << "Welcome to this family tree application\n";
         std::cout << "Please choose your desired option from the list bellow\n";
         std::cout << "1. Show my current tree\n";
-        std::cout << "2. Create a new family tree\n";
+        std::cout << "2. Add a new family member\n";
         std::cout << "3. Edit Current tree\n";
         std::cout << "9. Exit\n";
         std::cout << "Option: ";
     }
 
-    static void newTree(std::shared_ptr<FamilyTree> myTree) {
+    static void newPerson(std::shared_ptr<FamilyTree> myTree) {
         std::string firstName;
         std::string lastName;
         int age;
@@ -105,7 +105,8 @@ public:
             const auto& person = node->getData();
             std::cout << person.getFirstName() << std::endl;
             std::cout << person.getLastName()  << std::endl;
-            std::cout << person.getGender()  << std::endl;
+            std::cout << person.getAge() << std::endl;
+            std::cout << (eGender(person.getGender()))  << std::endl;
         }
     }
 
@@ -153,7 +154,7 @@ public:
                             menuLevel = 1;      //Show tree
                             break;
                         case 2:
-                            newTree(myTree);
+                            newPerson(myTree);
                             menuLevel = 2;      //Create new tree
                             break;
                         case 3:
@@ -173,7 +174,7 @@ public:
                     }
                     break;
                 case 2:
-                    newTree(myTree);
+                    newPerson(myTree);
                     if (userOption == 0) {
                         mainMenu();
                         menuLevel = 0;
