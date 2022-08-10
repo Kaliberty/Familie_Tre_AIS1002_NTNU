@@ -1,36 +1,16 @@
-# Familytree program
-A program made by studenst at NTNU Ålesund in the class AIS2001
+# Familie_Tre_AIS1002_NTNU
+Mappe oppgave i AIS1002 Objektorientert programmering og alogritmer.
 
-#candidate number:
-10041 & 10007
+Kanditatnummer på studentene er:
 
-#Reason for this program:
-This program is a respond to the mandatory assignment: "Mappeprosjekt AIS2001 vår 2022 ved NTNU Ålesund"
+10041
 
-#What does this program do?
-The purpose of this program is to give a user the ability to generate and edit a familytree.
-To user can interact with the tree by using diffrent menus. 
+10007
 
-#UML Diagram
+Familie tre oppgave fra NTNU Ålesund.
 
-
-
-#Sources
+Dette er en gruppeoppgave hvor meningen er å vise sin c++ kompetasne
 
 Oppgaven:
-Ligger som PDF i data
 
-Interesting links:
-
-https://github.com/praveenmylavarapu/family-Tree
-
-https://github.com/search?l=C%2B%2B&q=family+Tree&type=Code
-
-https://github.com/nickloomis/exercises/blob/9a488771e8e3491d0ba214f30273bf393b7e8894/FamilyTree/src/main.cc
-
-https://www.tenouk.com/cpluscodesnippet/cplusclassinheritancefamilytree.html
-
-https://stackoverflow.com/questions/50054619/simple-family-Tree-in-c-using-pointers
-
-http://www.cplusplus.com/forum/general/230136/
-
+https://tinyurl.com/FamilieTreOppgave
