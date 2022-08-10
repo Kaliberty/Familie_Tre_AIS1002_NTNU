@@ -103,10 +103,26 @@ public:
 
         for (const auto& node : children) {
             const auto& person = node->getData();
-            std::cout << person.getFirstName() << std::endl;
-            std::cout << person.getLastName()  << std::endl;
-            std::cout << person.getAge() << std::endl;
-            std::cout << (eGender(person.getGender()))  << std::endl;
+            std::cout << "First Name: " << person.getFirstName() << std::endl;
+            std::cout << "Last Name: " << person.getLastName()  << std::endl;
+            std::cout << "Age: " << person.getAge() << std::endl;
+
+            switch (person.getGender()) {
+                case 0:
+                    std::cout << "Gender: None" << std::endl;
+                    break;
+                case 1:
+                    std::cout << "Gender: Male" << std::endl;
+                    break;
+                case 2:
+                    std::cout << "Gender: Female" << std::endl;
+                    break;
+                case 3:
+                    std::cout << "Gender: Other" << std::endl;
+                    break;
+
+
+            };
         }
     }
 
