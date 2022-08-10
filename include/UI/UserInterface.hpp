@@ -157,10 +157,10 @@ public:
                             newPerson(myTree);
                             menuLevel = 2;      //Create new tree
                             break;
-                        case 3:
+                        /*case 3:                                   Har ikke tid til å impimentere, og derfor blitt kommentert ut
                             editTree(myTree);
                             menuLevel = 3;      //Edit Tree
-                            break;
+                            break; */
                         case 9:
                             running = false;    //Stop program
                             break;
