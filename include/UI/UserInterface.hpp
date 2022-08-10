@@ -54,7 +54,7 @@ public:
          } else if (gender == "F" || gender=="f") {
              p.setGender(Female);
          }  else if (gender == "O" || gender == "o"){
-             p.setGender(Other)
+             p.setGender(Other);
          }
         myTree->addNode(p);
     }
@@ -94,9 +94,19 @@ public:
 
     }
 
-    static void showTree() {
+    static void showTree(std::shared_ptr<FamilyTree> myTree) {
         std::cout << "This is your current tree:\n";
         std::cout << "Press 0 to go back to main menu\n";
+
+        const auto& rootNode = myTree->getRoot();
+        const auto& children = rootNode->getChildren();
+
+        for (const auto& node : children) {
+            const auto& person = node->getData();
+            std::cout << person.getFirstName() << std::endl;
+            std::cout << person.getLastName()  << std::endl;
+            std::cout << person.getGender()  << std::endl;
+        }
     }
 
 
@@ -139,7 +149,7 @@ public:
                 case 0:
                     switch (userOption) {
                         case 1:
-                            showTree();
+                            showTree(myTree);
                             menuLevel = 1;      //Show tree
                             break;
                         case 2:
@@ -170,7 +180,7 @@ public:
                     }
                     break;
                 case 3:
-                    editTree();
+                    editTree(myTree);
                     break;
                 default:
                     break;
