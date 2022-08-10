@@ -43,43 +43,7 @@ private:
 
 
 };
-/*
-<returverdi-type> <funksjons-navn> ( ... argumenter ...)
-{
-    int alder; // reserver skuffeplass til 1 stk integer
-    if (alder == 5) { .... }
-    ----- slutt på funksjon
-    ----- skuffen frigis
 
-    // Closure
-    // At du bare åpner med { midt i en kodeblokk
-    {
-        int x; // reserver en skuffe til integer
-        ....
-    }; // skuffen frigis
-
-} // <---- end of scope
-
-/*
-<returverdi-type> <funksjons-navn> ( ... argumenter ...)
-{
-    MinClass x(); // x -> symbolnavn, som bor i skuffe 2 + 3
-
-    x.bursdag();
-    x.test = 5;
-    x.alder = 5; // FEIL fordi private
-
-
-    int alder; // "alder" = symbolnavn
-    // Når du skriver "alder", byttes det ut med "skuffe 1"
-    // alder er et symbolnavn for skuffe 1
-    alder = 1;
-    if (alder == 5) {
-        // if (skuffe 1 verdi == 5)
-        // kodeblokk
-    }
-}
-*/
 int main() {
     Person basePerson;
     auto myTree = std::make_shared<FamilyTree>(basePerson);
