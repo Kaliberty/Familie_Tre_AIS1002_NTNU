@@ -97,7 +97,6 @@ public:
 
     static void showTree(std::shared_ptr<FamilyTree> myTree) {
         std::cout << "This is your current tree:\n";
-        std::cout << "Press 0 to go back to main menu\n";
 
         const auto& rootNode = myTree->getRoot();
         const auto& children = rootNode->getChildren();
