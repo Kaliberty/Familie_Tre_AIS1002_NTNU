@@ -3,7 +3,7 @@ Mappe oppgave i AIS1002 Objektorientert programmering og alogritmer.
 
 Kanditatnummer på studentene er:
 
-10041
+10003
 
 10007
 
